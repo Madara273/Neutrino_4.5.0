@@ -828,6 +828,7 @@ config LRU_GEN
 	depends on MMU
 	# make sure page->flags has enough spare bits
 	depends on 64BIT || !SPARSEMEM || SPARSEMEM_VMEMMAP
+	default y
 	help
 	  A high performance LRU implementation to overcommit memory. See
 	  Documentation/admin-guide/mm/multigen_lru.rst for details.
@@ -835,6 +836,7 @@ config LRU_GEN
 config LRU_GEN_ENABLED
 	bool "Enable by default"
 	depends on LRU_GEN
+	default y
 	help
 	  This option enables the multi-gen LRU by default.
 
